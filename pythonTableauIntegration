@@ -32,3 +32,9 @@ SUM([Sales])
 ,SUM([Profit])
 )
 """
+
+
+
+two packages are important:
+pip install nbconvert==5.3.1
+pip install tornado==4.2

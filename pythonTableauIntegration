@@ -1,0 +1,34 @@
+Step to Connect Python and tableau-
+-> Python and Tableau on same location
+1. Pip install tabpy
+2. pip install tabpy-client
+
+-> Now go to path: 
+e.g. -> C:/Users/User/AppData/Local/Programs/Python/Python/37/Lib/site- packages/tabpy_server
+(where your python install)-
+-> Then double click on "startup" to start server.
+-> Then go to tableau -> help -> Manage Analytics Extension Connection 
+
+-> Then Tabpy
+-> Port no is same as in showing in Python startup server
+(9004 is default) local host
+
+Connecting Python - Tableau:
+we can write python script in tableau calculation Filed: like:
+
+-> Superstore Data-
+"""
+SCRIPT_REAL(
+'
+import numpy as np
+from sklearn import linear_model
+clf = linear_model.LinearRegression()
+x = np.transpose(np.array([_arg1]))
+y = np.array(_arg2)
+clf.fit(x,y)
+return clf.predict(x).tolist()
+',
+SUM([Sales])
+,SUM([Profit])
+)
+"""

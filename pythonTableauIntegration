@@ -6,7 +6,7 @@ Step to Connect Python and tableau-
 -> Now go to path: 
 e.g. -> C:/Users/User/AppData/Local/Programs/Python/Python/37/Lib/site- packages/tabpy_server
 (where your python install)-
--> Then double click on "startup" to start server.
+-> Then double click on "startup" to start server. (i.e. Windows Batch File)
 -> Then go to tableau -> help -> Manage Analytics Extension Connection 
 
 -> Then Tabpy
